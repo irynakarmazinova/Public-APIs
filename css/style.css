@@ -1,0 +1,9 @@
+section {
+  margin: 10px;
+  border: 1px solid #555;
+  padding: 10px;
+}
+
+h1 {
+  border-bottom: 1px solid #555;
+}
