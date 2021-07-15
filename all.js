@@ -6,7 +6,7 @@ async function getCountries() {
 async function init() {
   try {
     const countries = await getCountries();
-    // console.log(countries);
+    console.log(countries);
     // -----------------------------------------------------------------
     // Здесь мы получаем массив данных c объектами стран с сервера
 
@@ -21,9 +21,9 @@ async function init() {
     //  Asia: [..., "India", ...]
     // }
     // -----------------------------------------------------------------
-    // сортируем
     const rootRef = document.getElementById("root");
 
+    // сортируем
     const a = countries.reduce((acc, { region, name }) => {
       if (!acc[region]) {
         acc[region] = [];

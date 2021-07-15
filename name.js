@@ -1,6 +1,6 @@
 async function foundCountries(search) {
   const countries = await fetch(
-    `https://restcountries.eu/rest/v2/currency/${search}`
+    `https://restcountries.eu/rest/v2/name/${search}`
   );
   return countries.json();
 }
@@ -24,4 +24,4 @@ function onChangeInput({ target: { value } }) {
   }
 }
 
-inputRef.addEventListener("input", onChangeInput);
+inputRef.addEventListener("input", _.debounce(onChangeInput, 500));
